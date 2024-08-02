@@ -1,0 +1,211 @@
+<html>
+    <head>
+        <!-- <style>
+            body{
+               
+                display: flex;
+            justify-content: center;
+             align-items: center; 
+             background-color: aquamarine;
+             min-height: 100%; /* Ensure body covers the entire viewport */
+            margin: 0; /* Remove default margin */
+            }
+            .main{
+                flex-direction: column;
+            align-items: stretch;
+                margin-top: 20px;
+                background-color: rgb(2, 2, 24);
+                color: #f0f8ff;
+                padding: 10px;
+                border-radius: 10px;
+            }
+label{
+    margin-top: 30px;
+}
+input{
+    margin-top: 10px;
+    border: 1 solid white;
+    border-radius: 5px;
+    background-color: rgb(2, 2, 24);
+    color: #f0f8ff;
+}
+textarea{
+    margin-top: 10px;
+}
+
+.last{
+    display: flex;
+   gap: 5px;
+    align-items: first baseline;
+}
+
+.d{
+display: inline;
+justify-content: space-between;
+}
+
+.btn{
+    margin: 10px;
+    height: 30px;
+    width: 90px;
+    background-color: aquamarine;
+    color: rgb(2, 2, 51);
+    border:none;
+    border-radius: 10px;
+}
+.error{
+    color: red;
+    font-size: 80%;
+    margin-left: 50px;
+    display: none;
+} -->
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: aquamarine;
+        min-height: 100%; /* Ensure body covers the entire viewport */
+        margin: 0; /* Remove default margin */
+        font-family: Arial, sans-serif; /* Optional: Choose a suitable font */
+    }
+
+    .main {
+        flex-direction: column;
+        align-items: stretch;
+        margin-top: 20px;
+        background-color: rgb(2, 2, 24);
+        color: #f0f8ff;
+        padding: 20px; /* Increased padding for better spacing */
+        border-radius: 10px;
+        width: 400px; /* Optional: Set a fixed width for the form */
+    }
+
+    label {
+        margin-top: 10px; /* Adjusted margin for better spacing */
+    }
+
+    input, textarea, select {
+        margin-top: 5px; /* Adjusted margin for better spacing */
+        padding: 8px;
+        border: 1px solid white;
+        border-radius: 5px;
+        background-color: rgb(2, 2, 24);
+        color: #f0f8ff;
+        width: 100%; /* Ensures input fields take up full width */
+        box-sizing: border-box; /* Ensures padding and border are included in width */
+    }
+
+    .last {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        margin-top: 10px;
+    }
+
+    .btn {
+        margin-top: 10px;
+        height: 30px;
+        width: 100px; /* Adjusted width for better button size */
+        background-color: rgb(4, 3, 68);
+        color: rgb(242, 242, 250);
+        border: none;
+        border-radius: 10px;
+        cursor: pointer; /* Ensure pointer cursor on button */
+    }
+
+    .error {
+        color: red;
+        font-size: 12px; /* Adjusted font size for better readability */
+        margin-top: 5px;
+        margin-left: 10px; /* Adjusted margin for better alignment */
+        display: none; /* Initially hide error messages */
+    }
+       </style>
+
+     
+    </head>
+    <body>
+        <form action="">
+        <div class="main">
+           <center><H1>SIGNUP FORM</H1></center>
+
+
+        <div class="d">
+        <label for="fname" >First Name:</label>
+        <input type="text" id="fname"/><br>
+    <span class="error" id="fnamemsg">error message</span>
+    </div>
+<br>
+
+
+<div class="d">
+        <label for="lname" >Last Name:</label>
+        <input type="text" id="lname"/><br>
+        <span class="error" id="lnamemsg">error message</span></div>
+        <br>
+
+
+        <div class="d">
+    <label>Email:</label>
+    <input type="email" id="email"/><br>
+    <span class="error" id="emailmsg">error message</span></div>
+    <br>
+
+
+    <div class="d">
+    <label>Phone Number:</label>
+    <input type="tel" id="phno"/><br>
+    <span class="error" id="phnomsg">error message</span></div>
+    <br>
+
+
+    <div class="d">
+    <label>Password:</label>
+    <input type="password" id="passwd"/><br>
+    <span class="error" id="passwdmsg">error message</span></div>
+    <br>
+
+
+    <div class="d">
+    <label>Confirm Password:</label>
+    <input type="password" id="confpasswd"/><br>
+    <span class="error" id="confpasswdmsg">error message</span></div>
+    <br>
+
+    <div class="d">
+    <label>Date of birth:</label>
+    <input type="date" id="dob">
+    <br>
+    <span class="error" id="dobmsg">error message</span></div>
+    </div>
+
+    <br>
+   <p> <label>Gender:</label>
+    <input type="radio" name="gender" id="male" onclick="removemsg()"><label>Male</label>
+    <input type="radio" name="gender" id="Female" onclick="removemsg()"><label>Female</label>
+    <input type="radio" name="gender" id="Others" onclick="removemsg()"><label>Others</label>
+</p><span class="error" id="gendermsg">Please select your gender.</span>
+<br>
+
+
+<label>Country:</label>
+<select id="country">
+    <option>India</option>
+    <option>America</option>
+    <option>Australia</option>
+</select><span class="error" id="countrymsg">error message</span>
+<br>
+
+<div class="last">
+<label>Address:</label>
+<textarea rows="3" cols="40" id="textarea"></textarea></div>
+<span class="error" id="textareamsg">error message</span>
+
+<center><input type="button" class="btn" id="btn" value="SUBMIT" onclick="submitform()"/></center>
+</div>
+</form>
+<script src="script.js"></script>
+</body>
+</html>
+

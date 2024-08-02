@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Dance Competition Form</title>
+    <style>
+        body {
+            background-color: #c0ea7b; /* Plain background color */
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 230vh;
+        }
+
+        .form-container {
+            background-color: #fff; /* White background for the form */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 600px;
+        }
+
+        h1, h3, h5 {
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 5px;
+        }
+
+        input, select {
+            margin-bottom: 15px;
+            padding: 8px;
+            border: 1px solid #bfbfbf;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            width: auto;
+            padding: 10px 20px;
+            margin: 5px 0;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #28a745;
+            color: white;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #218838;
+        }
+
+        input[type="reset"] {
+            width: auto;
+            padding: 10px 20px;
+            margin: 5px 0;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #d22222;
+            color: white;
+        }
+
+        input[type="reset"]:hover{
+            background-color: #d22222;
+        }
+
+        input[type="button"] {
+            width: auto;
+            padding: 10px 20px;
+            margin: 5px 0;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #be9a23;
+            color: white;
+        }
+
+        input[type="button"]:hover {
+            background-color: #be9a23;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form-container">
+        <h1> Dance Competition @Vizag</h1>
+        <h3> Please fill this form to Nominate yourself for the dance competition at Visakhapatnam</h3>
+        <form action="/submit" method="post">
+            <h5><i>Personal Details</i></h5>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+
+            <label for="password">Set a Password:</label>
+            <input type="password" id="password" name="password">
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+
+            <label for="birthday">DOB:</label>
+            <input type="date" id="birthday" name="birthday">
+
+            <label>
+                <p> Gender</p>
+                <input type="radio" name="gender" value="male">
+                Male
+            </label>
+            <label>
+                <input type="radio" name="gender" value="female">
+                Female
+            </label>
+
+            <h5><i>Mandatory things</i></h5>
+            <label for="website">GDrive Link of your Performance</label>
+            <input type="url" id="website" name="website">
+
+            <label for="quantity">Stage time (in Mins):</label>
+            <input type="number" id="quantity" name="quantity">
+
+            <label for="range">Volume range (low to high):</label>
+            <input type="range" id="range" name="range" min="0" max="100">
+
+            <label for="month">Month you want to perform:</label>
+            <input type="month" id="month" name="month">
+
+            <label for="week">Week you want to perform:</label>
+            <input type="week" id="week" name="week">
+
+            <label for="time">Preferred Time you want to perform:</label>
+            <input type="time" id="time" name="time">
+
+            <label for="datetime">Appointment with Choreographer:</label>
+            <input type="datetime-local" id="datetime" name="datetime">
+
+            <h5><i>Thanks for your patience</i></h5>
+            <label for="file">Upload your image:</label>
+            <input type="file" id="file" name="file">
+
+            <label for="color">Which Color dress will you be wearing for performance:</label>
+            <input type="color" id="color" name="color">
+
+            <label for="select">Choose seating arrangement:</label>
+            <select id="select" name="select">
+                <option value="option1">Front row</option>
+                <option value="option2">Back row</option>
+            </select>
+
+            <label>
+                <input type="checkbox" name="subscribe" value="newsletter">
+                Subscribe to our newsletter
+            </label>
+
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset the details.">
+            <input type="button" value="Check if the form is active or not!?" onclick="alert('Form is still active!')">
+        </form>
+    </div>
+</body>
+</html>
+

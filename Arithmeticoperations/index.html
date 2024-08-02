@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <script src="script.js">
+        </script>
+        <style>
+            body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(231, 219, 215);
+            }
+            .main{
+                margin-top: 100px;
+                padding-top: 50px;
+              text-align: center;
+              background-color: rgb(158, 217, 235);
+              color: rgb(1, 5, 19);
+              width: 500px;
+              height: 200px; 
+              border: 1 solid black;
+              border-radius: 10px;
+            }
+            .inline{
+                display: flex;
+            justify-content: center;
+            gap: 10px;
+            align-items: center;
+              
+            }
+            input{
+                background-color: white;
+                color: black;
+                height: 30px;
+                border: 1 solid aliceblue;
+                border-radius: 10px;
+                font-size: 100%;
+            }
+            .btn{
+                width: 90px;
+                height: 30px;
+                font-size: 100%;
+                background-color: rgb(1, 5, 19);
+                color: aliceblue;
+            }
+            .options{
+                display: flex;
+                justify-content: center;
+                gap: 10px;
+            }
+            .reset{
+                margin-top: 20px; 
+            }
+            #res{
+                background-color: rgb(43, 19, 65);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main">
+            <!-- <form> -->
+        <div class="inline"> <label>a:</label> <input type="text" id="a" placeholder="Enter a value"/></div> <br>
+        <div class="inline"><label>b:</label> <input type="text" id="b" placeholder="Enter b value"/></div> <br>
+          <div class="options">
+             <input type="button" class="btn" id="add" value="ADD" onclick="calc('add')"/>
+             <input type="button" class="btn" id="sub" value="SUB" onclick="calc('sub')"/>
+             <input type="button" class="btn" id="mul" value="MUL" onclick="calc('mul')"/>
+             <input type="button" class="btn" id="div" value="DIV" onclick="calc('div')"/></div>
+           <div class="reset">
+              <input type="button" class="btn"id="res" value="RESET" onclick="clearfields()"/> 
+        </div>
+    <!-- </form> -->
+        </div>
+    </body>
+</html>

@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <script src="script.js"></script>
+        <style>
+            body{
+                display: flex;
+            justify-content: center;
+            align-items: center;
+            }
+            .main{
+                text-align: center;
+            }
+            .btn{
+                margin-top: 10px;
+              margin-left: 10px;
+                width:50px;
+                height:50px;
+                font-size: 100%;
+                border: 2px solid gray;
+                border-radius: 5px;
+            }
+            .input{
+                width: auto;
+                height: 40px;
+                border: 2px solid gray;
+                border-radius: 5px;
+            }
+        </style>
+    </head>
+    <body>
+       
+        <div class="main">
+            <h1>CALCULATOR</h1>
+            <input type="text" id="text" class="input"/>
+<div class="1st">
+    <input type="button" class="btn" id="7" value="7" onclick="act('7')"/>
+    <input type="button" class="btn" id="8" value="8" onclick="act('8')"/>
+    <input type="button" class="btn" id="9" value="9" onclick="act('9')"/>
+    <input type="button" class="btn" id="/" value="/" onclick="act('/')"/>
+</div>
+<div class="2nd">
+    <input type="button" class="btn" id="4" value="4" onclick="act('4')"/>
+    <input type="button" class="btn" id="5" value="5" onclick="act('5')"/>
+    <input type="button" class="btn" id="6" value="6" onclick="act('6')"/>
+    <input type="button" class="btn" id="*" value="*" onclick="act('*')"/>
+</div>
+<div class="3rd">
+    <input type="button" class="btn" id="1" value="1" onclick="act('1')"/>
+    <input type="button" class="btn" id="2" value="2" onclick="act('2')"/>
+    <input type="button" class="btn" id="3" value="3" onclick="act('3')"/>
+    <input type="button" class="btn" id="-" value="-" onclick="act('-')"/>
+</div>
+<div class="4th">
+    <input type="button" class="btn" id="0" value="0" onclick="act('0')"/>
+    <input type="button" class="btn" id="." value="." onclick="act('.')"/>
+    <input type="button" class="btn" id="+" value="+" onclick="act('+')"/>
+    <input type="button" class="btn" id="%" value="%" onclick="act('%')"/>
+</div>
+<div class="5th">
+    <input type="button" class="btn" id="c" value="C" onclick="clearfield1()"/>
+    <input type="button" class="btn" id="=" value="=" onclick="calculate()"/>
+    <input type="button" class="btn" id="x" value="x" onclick="back()"/>
+    <input type="button" class="btn" id="^" value="^" onclick="act('^')"/>
+
+</div>
+        </div>
+    </body>
+</html>
